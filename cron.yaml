@@ -1,0 +1,18 @@
+cron:
+# - description: "rent minotoring cron"
+#   url: /cron/rent_cron
+#   target: default 
+#   schedule: every day 18:55
+#   timezone: Africa/Lagos
+#   retry_parameters:
+#     min_backoff_seconds: 2.5
+#     max_doublings: 5
+
+# - description: "custom bill minotoring cron"
+#   url: /cron/custombill_cron
+#   target: default 
+#   schedule: every day 18:57
+#   timezone: Africa/Lagos
+#   retry_parameters:
+#     min_backoff_seconds: 2.5
+#     max_doublings: 5

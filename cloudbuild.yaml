@@ -1,0 +1,14 @@
+steps:
+  - name: node:16
+    entrypoint: npm
+    args: ["install"]
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: "bash"
+    args: 
+      - "-c"
+      - |
+        gcloud app deploy app.yaml
+        curl -X POST --data-urlencode "payload={\"channel\": \"#apms\", \"username\": \"webhookbot\", \"text\": \"APMS Backend has been deployed successfully.\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
+timeout: "1600s"
+options:
+  logging: CLOUD_LOGGING_ONLY
